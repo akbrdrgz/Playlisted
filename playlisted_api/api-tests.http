@@ -1,0 +1,154 @@
+### Variables
+@baseUrl = http://localhost:8080
+
+###############################################
+# USERS
+###############################################
+
+### Get All Users
+GET {{baseUrl}}/Users
+
+### Create New User (Sign up)
+POST {{baseUrl}}/Users
+Content-Type: application/json
+
+{
+    "username": "newUser2",
+    "password": "newPassword2"
+}
+
+### Update User (partial)
+PUT {{baseUrl}}/Users/4
+Content-Type: application/json
+
+{
+    "username": "updatedUser2"
+}
+
+### Update User (full)
+PUT {{baseUrl}}/Users/4
+Content-Type: application/json
+
+{
+    "username": "updatedUser2",
+    "password": "updatedPassword2"
+}
+
+### Delete User
+DELETE {{baseUrl}}/Users/4
+
+### Validation tests
+
+### Update a non-existent User
+PUT {{baseUrl}}/Users/999
+Content-Type: application/json
+
+{
+    "username": "nonExistentUser"
+}
+
+### Delete a non-existent User
+DELETE {{baseUrl}}/Users/999
+
+
+###############################################
+# APP GAMES
+###############################################
+
+### Get All Games
+GET {{baseUrl}}/Games
+
+###############################################
+# USER LOGGED GAMES
+###############################################
+
+### Get All User Logged Games
+GET {{baseUrl}}/UserGames?userId=1
+
+
+### Log New Game
+POST {{baseUrl}}/UserGames?userId=1
+Content-Type: application/json
+
+{
+    "userId": 1,
+    "gameId": 19,
+    "status": "cleared"
+}
+
+### Update Logged Game (partial)
+PUT {{baseUrl}}/UserGames?userId=1&gameId=2
+Content-Type: application/json
+
+{
+    "userId": 1,
+    "gameId": 2,
+    "status": "cleared"
+}
+
+###############################################
+# ACHIEVEMENTS
+###############################################
+
+### Get All Achievements
+GET {{baseUrl}}/Feats
+
+###############################################
+# USER ACHIEVEMENTS
+###############################################
+
+### Get User Achievements
+GET {{baseUrl}}/UserAchievements?userId=1
+
+###############################################
+# REVIEWS
+###############################################
+
+### Get All Reviews
+GET {{baseUrl}}/Reviews
+
+### Create New Review
+POST {{baseUrl}}/Reviews
+Content-Type: application/json
+
+{
+
+    "userId": 1,
+    "gameId": 15,
+    "rating": 1.0,
+    "status": "cleared",
+    "reviewText": "Bruh"
+}
+
+### Update Review (partial)
+PUT {{baseUrl}}/Reviews/1
+Content-Type: application/json
+
+{
+    "rating": 5.0
+}
+
+### Update Review (full)
+PUT {{baseUrl}}/Reviews/1
+Content-Type: application/json
+
+{
+    "rating": 5.0,
+    "reviewText": "Kyoko and Celeste my beloveds"
+}
+
+### Delete Review
+DELETE {{baseUrl}}/Reviews/2
+
+### Validation tests
+
+### Update a non-existent Review
+PUT {{baseUrl}}/Reviews/999
+Content-Type: application/json
+
+{
+    "username": "nonExistentReview"
+}
+
+### Delete a non-existent Review
+DELETE {{baseUrl}}/Reviews/999
