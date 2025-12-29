@@ -172,8 +172,4 @@ Playlisted/
 ```
 
 ## 📄 AI Acknowledgement
-AI tools were used during the development of this project to assist with design and implementation decisions.  
-AI was specifically used to help create the `UserGames` and `UserAchievements` services, which handle the logic for logging games and triggering achievements.  
-AI was used to help modify the test templates, including unit, widget, and API tests.
-Additionally, AI assistance was used to help identify and resolve bugs and errors related to both the database and the application code.  
-All AI-generated suggestions were reviewed, adapted, and implemented by the developers.
+AI tools were used throughout the development of this project to assist with design, implementation, and debugging decisions. Specifically, AI was leveraged to help create the UserGames and UserAchievements services for logging games and triggering achievements, as well as to modify test templates for unit, widget, and API tests. Additionally, AI assistance supported the identification and resolution of bugs and errors in both the database and application code. Tools such as Claude and DeepSeek provided guidance, suggestions, and explanations related to coding practices, error resolution, and general problem-solving, particularly when integrating the front-end with the API and back-end services. All AI-generated suggestions were carefully reviewed, adapted, and implemented by the developers. The use of AI was intended to enhance understanding, improve efficiency, and support the learning process, ensuring that the submitted work reflects the students’ own effort and comprehension of the project requirements rather than being generated automatically.
