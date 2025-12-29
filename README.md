@@ -71,13 +71,6 @@ DB_USER=playlisted
 DB_PASSWORD=password
 ```
 
-- **Flutter .env**  
-Required for API requests from the client:
-```env
-BASE_URL=http://10.0.2.2:8080   # Android Emulator
-BASE_URL=http://localhost:8080   # iOS Simulator
-```
-
 ### 3. Client Setup
 - Navigate to the Flutter project folder:
 ```bash
